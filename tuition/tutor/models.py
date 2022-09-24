@@ -18,4 +18,3 @@ class Album(models.Model):
     release_date=models.DateField()
     num_stars=models.IntegerField()
     
-    
