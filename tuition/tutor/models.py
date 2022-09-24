@@ -28,4 +28,10 @@ class sub_Person(Album):
     shirt_size = models.CharField(max_length=1,choices=SHIRT_SIZES)
     
     
+class Runner(Album):
+    MedalType = models.TextChoices('MedalType','GOLD SILVER BRONZE')
+    name=Album.name
+    medal=models.CharField(blank=True,choices=MedalType.choices,max_length=10)
+    
+    
     
