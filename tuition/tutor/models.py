@@ -34,4 +34,5 @@ class Runner(Album):
     medal=models.CharField(blank=True,choices=MedalType.choices,max_length=10)
     
     
-    
+class Fruit(models.Model):
+    name=models.CharField(max_length=100,primary_key=True)
