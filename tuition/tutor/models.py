@@ -39,3 +39,17 @@ class Fruit(models.Model):
     
 class verbose_Field(models.Model):
     first_name=models.CharField("Person's first name",max_length=30)
+    
+class verbose_name_m2m_o2o_ForeignKey(models.Model):
+    poll=models.ForginKey(
+        Poll,
+        on_delete=models.CASCADE,
+        verbose_name="the related poll",
+    )
+    site=models.ManytoManyField(Site,verbose_name='list of sites')
+    place=models.OneToOneField(
+        Place,
+        on_delete=models.CASCADE,
+        verbose_name='related place'
+    )
+    
