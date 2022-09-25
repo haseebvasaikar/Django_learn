@@ -36,3 +36,6 @@ class Runner(Album):
     
 class Fruit(models.Model):
     name=models.CharField(max_length=100,primary_key=True)
+    
+class verbose_Field(models.Model):
+    first_name=models.CharField("Person's first name",max_length=30)
